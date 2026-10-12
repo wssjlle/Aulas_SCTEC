@@ -141,3 +141,28 @@ print(cidades)
 convidados = ["Alícia", "Sabrina", "Wanderlei", "Sandra"]
 total = len(convidados)
 print(f"Serão convidados {total} pessoas.")
+
+
+lista_compras=["arroz", "feijão", "carne", "abacate", "macarrão", "café"]
+print(lista_compras)
+lista_compras.append("farinha")
+print(lista_compras)
+lista_compras.insert(0,"sabonete")
+print(lista_compras)
+lista_compras[2] = "limão"
+print(lista_compras)
+lista_compras.remove("arroz")
+print(lista_compras)
+print(sorted(lista_compras))
+print(len(lista_compras))
+
+
+estudantes = ["Ana", "Bruno", "Carla"]
+estudantes.append("Daniel")
+estudantes.insert(0,"Eduarda")
+estudantes[2] = "Bianca"
+removido=estudantes.pop()
+print(removido)
+estudantes.sort()
+print(estudantes)
+print(len(estudantes))
