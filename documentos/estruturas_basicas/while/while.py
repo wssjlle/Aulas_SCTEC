@@ -1,98 +1,70 @@
-numero = int(input("Digite um número: "))
+nome = input("Digite seu nome:")
+print(f"seu nome é {nome}")
 
-if numero % 2 == 0:
-    print("O número é par.")
+num1 = int(input("digite um numero: "))
+num2 = int(input("digite outro numero: "))
+print(f"a soma é {num1 + num2}")
+
+resp = int(input("quantas pessoas? "))
+if resp > 8 :
+    print("aguarde")
 else:
-    print("O número é ímpar.")
-numero = 1
+    print("mesa pronta")
 
-while numero <= 5:
-    print(numero)
-    numero += 1
+num = int(input("Digite um número: "))
+if num % 10 == 0:
+    print("multiplo de 10")
+else:
+    print("não é multiplo de 10")
 
+num=10
+while num > 0:
+    print(num)
+    num -= 1
+print("fim")
 
-mensagem = ""
+ingrediente = ""
+while ingrediente != "sair":
+    ingrediente = input("Digite o ingrediente: ")
+    print(f"{ingrediente} adicionado!")
+print("finalizado")
 
-while mensagem != "sair":
-    mensagem = input(
-        "Digite uma mensagem ou 'sair': "
-    )
-
-    if mensagem != "sair":
-        print(mensagem)
-programa_ativo = True
-
-while programa_ativo:
-    mensagem = input(
-        "Digite uma mensagem ou 'sair': "
-    )
-
-    if mensagem == "sair":
-        programa_ativo = False
-    else:
-        print(mensagem)
 while True:
-    cidade = input(
-        "Digite uma cidade ou 'sair': "
-    )
-
-    if cidade == "sair":
+    idade = input("Digite a idade: ")
+    if idade == "sair":
         break
+    elif int(idade) < 3:
+        print(f"ingresso para {idade} é gratuito")
+    elif int(idade) <= 12:
+        print(f"ingresso para {idade} custa R$ 10,00")
+    else:
+        print(f"ingresso para {idade} custa R$ 15,00")
+print("você saiu")
 
-    print(f"Você informou: {cidade}")
-numero = 0
-
-while numero < 10:
-    numero += 1
-
-    if numero % 2 == 0:
+num=0
+while num < 20:
+    num += 1
+    if num % 2 == 0:
         continue
+    print(num)
 
-    print(numero)
-usuarios_pendentes = [
-    "Ana",
-    "Bruno",
-    "Carla"
+
+pedidos_pendentes = [
+    "pedido_101",
+    "pedido_102",
+    "pedido_103"
 ]
 
-usuarios_confirmados = []
+pedidos_concluidos = []
 
-while usuarios_pendentes:
-    usuario = usuarios_pendentes.pop()
+while pedidos_pendentes:
+    pedido = pedidos_pendentes.pop(0)
 
-    print(f"Confirmando {usuario}.")
-    usuarios_confirmados.append(usuario)
+    print(f"Processando {pedido}.")
+    pedidos_concluidos.append(pedido)
 
-animais = [
-    "gato",
-    "cachorro",
-    "gato",
-    "coelho",
-    "gato"
-]
+print("\nPedidos concluídos:")
 
-while "gato" in animais:
-    animais.remove("gato")
+for pedido in pedidos_concluidos:
+    print(pedido)
 
-print(animais)
-
-respostas = {}
-pesquisa_ativa = True
-
-while pesquisa_ativa:
-    nome = input("Digite seu nome: ")
-    linguagem = input(
-        "Qual é sua linguagem favorita? "
-    )
-
-    respostas[nome] = linguagem
-
-    repetir = input(
-        "Outra pessoa responderá? (sim/não): "
-    )
-
-    if repetir.lower() == "não":
-        pesquisa_ativa = False
-
-for nome, linguagem in respostas.items():
-    print(f"{nome}: {linguagem}")
